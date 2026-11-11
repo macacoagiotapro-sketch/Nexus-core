@@ -1,14 +1,14 @@
 // ======================================
-// NEXUS CORE - TASK MANAGEMENT
+//  nexus core manuseamento
 // ======================================
 
-// Elementos da interface
+// Elemento da interface
 const addTaskButton = document.getElementById("add-task");
 const taskList = document.getElementById("task-list");
 const pendingCount = document.getElementById("pending-count");
 const completedCount = document.getElementById("completed-count");
 
-// Carregar tarefas salvas no navegador
+
 let tasks = [];
 
 try {
@@ -17,7 +17,7 @@ try {
     tasks = [];
 }
 
-// Salvar tarefas
+
 function saveTasks() {
     localStorage.setItem("nexus-tasks", JSON.stringify(tasks));
 }
@@ -31,7 +31,7 @@ function updateCounters() {
     completedCount.textContent = completed;
 }
 
-// Exibir tarefas na tela
+
 function renderTasks() {
     taskList.innerHTML = "";
 
@@ -89,7 +89,7 @@ function renderTasks() {
     updateCounters();
 }
 
-// Adicionar nova tarefa
+
 addTaskButton.addEventListener("click", () => {
 
     const title = prompt("Digite o nome da nova tarefa:");
