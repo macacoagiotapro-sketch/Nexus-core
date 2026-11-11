@@ -343,3 +343,49 @@ footer {
         gap: 12px;
     }
 }
+
+/* TASK ITEMS */
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px;
+    background: #101a2b;
+    border: 1px solid #263449;
+    border-radius: 9px;
+    transition: 0.2s;
+}
+
+.task-item:hover {
+    border-color: #3b82f6;
+}
+
+.task-item input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: #3b82f6;
+    cursor: pointer;
+}
+
+.task-item span {
+    flex: 1;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.task-item span.completed {
+    text-decoration: line-through;
+    color: #64748b;
+}
+
+.task-item button.delete-task {
+    background: #3b2530;
+    color: #f87171;
+    padding: 8px 12px;
+    font-size: 11px;
+}
+
+.task-item button.delete-task:hover {
+    background: #572a38;
+}
