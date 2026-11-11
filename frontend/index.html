@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Nexus Core | Organização Pessoal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <span class="logo-icon">✦</span>
+            <h2>NEXUS <span>CORE</span></h2>
+        </div>
+
+        <nav>
+            <p class="menu-title">MENU PRINCIPAL</p>
+
+            <a href="#" class="active">⌂ Dashboard</a>
+            <a href="#">☑ Tarefas</a>
+            <a href="#">▦ Calendário</a>
+            <a href="#">◎ Metas</a>
+            <a href="#">◇ Hábitos</a>
+            <a href="#">▤ Anotações</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="#">⚙ Configurações</a>
+            <p>Nexus Core v1.0</p>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="welcome">SEU ESPAÇO DE ORGANIZAÇÃO</p>
+                <h1>Visão geral</h1>
+            </div>
+
+            <div class="user-profile">
+                <div class="avatar">U</div>
+                <span>Usuário</span>
+            </div>
+        </header>
+
+        <section class="welcome-section">
+            <h2>Bem-vindo ao Nexus Core.</h2>
+            <p>Organize sua rotina e acompanhe seus objetivos.</p>
+        </section>
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>Tarefas pendentes</span>
+                <h2 id="pending-count">0</h2>
+                <p>Atividades para realizar</p>
+            </div>
+
+            <div class="stat-card">
+                <span>Tarefas concluídas</span>
+                <h2 id="completed-count">0</h2>
+                <p>Atividades finalizadas</p>
+            </div>
+
+            <div class="stat-card">
+                <span>Metas ativas</span>
+                <h2>0</h2>
+                <p>Objetivos em andamento</p>
+            </div>
+
+        </section>
+
+        <section class="tasks-section">
+
+            <div class="section-header">
+                <div>
+                    <h2>Minhas tarefas</h2>
+                    <p>Organize suas atividades.</p>
+                </div>
+
+                <button id="add-task">+ Nova tarefa</button>
+            </div>
+
+            <div id="task-list" class="task-list">
+                <p class="empty-message">
+                    Nenhuma tarefa cadastrada.
+                </p>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>© 2026 Nexus Core. Todos os direitos reservados.</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
