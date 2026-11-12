@@ -1,18 +1,21 @@
 /* =================================
-   NEXUS CORE - DESIGN SYSTEM
+   NEXUS CORE - DESIGN STYLE
 ================================= */
 
 :root {
-    --background: #0b1120;
-    --sidebar: #0f172a;
-    --surface: #151f32;
-    --surface-hover: #1c2a40;
-    --primary: #3b82f6;
-    --primary-light: #60a5fa;
-    --text: #f1f5f9;
-    --text-muted: #94a3b8;
-    --border: #263449;
-    --success: #34d399;
+    --background: #252525;
+    --sidebar: #1b1b1b;
+    --surface: #303030;
+    --surface-hover: #3b3b3b;
+
+    --primary: #b00000;
+    --primary-light: #ed0808;
+
+    --text: #f2f2f2;
+    --text-muted: #b0b0b0;
+
+    --border: #454545;
+    --success: #ed0808;
 }
 
 * {
@@ -50,16 +53,11 @@ body {
     margin-bottom: 55px;
 }
 
-.logo-icon {
-    background: #1d3557;
-    color: var(--primary-light);
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    font-size: 23px;
+.logo-image {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    border-radius: 5px;
 }
 
 .logo h2 {
@@ -74,7 +72,7 @@ body {
 .menu-title {
     font-size: 10px;
     font-weight: bold;
-    color: #64748b;
+    color: #888888;
     letter-spacing: 1.5px;
     margin: 0 0 15px 10px;
 }
@@ -98,9 +96,9 @@ body {
 }
 
 .sidebar nav a.active {
-    background: #1d3557;
-    color: var(--primary-light);
-    border-left: 3px solid var(--primary);
+    background: #491515;
+    color: #ff7777;
+    border-left: 3px solid var(--primary-light);
 }
 
 .sidebar-bottom {
@@ -109,7 +107,7 @@ body {
 
 .sidebar-bottom p {
     font-size: 11px;
-    color: #64748b;
+    color: #888888;
     text-align: center;
     margin-top: 20px;
 }
@@ -150,8 +148,8 @@ body {
 .avatar {
     width: 38px;
     height: 38px;
-    background: #1d3557;
-    color: var(--primary-light);
+    background: #491515;
+    color: #ff7777;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -162,8 +160,8 @@ body {
 /* WELCOME SECTION */
 
 .welcome-section {
-    background: linear-gradient(110deg, #172b4d, #14213a);
-    border: 1px solid #29456d;
+    background: linear-gradient(110deg, #3b1717, #292323);
+    border: 1px solid #692626;
     padding: 30px;
     border-radius: 13px;
     margin-bottom: 28px;
@@ -175,7 +173,7 @@ body {
 }
 
 .welcome-section p {
-    color: #a9bdd6;
+    color: #d0baba;
     font-size: 13px;
 }
 
@@ -212,7 +210,7 @@ body {
 }
 
 .stat-card p {
-    color: #64748b;
+    color: #999999;
     font-size: 11px;
 }
 
@@ -255,9 +253,11 @@ button {
 }
 
 button:hover {
-    background: #2563eb;
+    background: var(--primary-light);
     transform: translateY(-1px);
 }
+
+/* TASK LIST */
 
 .task-list {
     display: flex;
@@ -266,15 +266,106 @@ button:hover {
 }
 
 .empty-message {
-    color: #64748b;
+    color: #999999;
     font-size: 13px;
     padding: 20px 0;
     text-align: center;
 }
 
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px;
+    background: #292929;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    transition: 0.2s;
+}
+
+.task-item:hover {
+    border-color: var(--primary);
+}
+
+.task-item input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: var(--primary-light);
+    cursor: pointer;
+}
+
+.task-item span {
+    flex: 1;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.task-item span.completed {
+    text-decoration: line-through;
+    color: #888888;
+}
+
+.task-item button.delete-task {
+    background: #572020;
+    color: #ff9999;
+    padding: 8px 12px;
+    font-size: 11px;
+}
+
+.task-item button.delete-task:hover {
+    background: #852020;
+    color: white;
+}
+
+/* CALENDAR */
+
+.calendar-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+.calendar-navigation {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.calendar-navigation h3 {
+    font-size: 14px;
+    min-width: 115px;
+    text-align: center;
+}
+
+.calendar-navigation button {
+    padding: 9px 12px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.calendar-day-name {
+    text-align: center;
+    color: var(--primary-light);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 0;
+}
+
+#calendar-days {
+    display: contents;
+}
+
+/* FOOTER */
+
 footer {
     text-align: center;
-    color: #64748b;
+    color: #888888;
     font-size: 11px;
     margin-top: 35px;
 }
@@ -306,6 +397,11 @@ footer {
     .logo {
         justify-content: center;
         margin-bottom: 35px;
+    }
+
+    .logo-image {
+        width: 38px;
+        height: 38px;
     }
 
     .logo h2,
@@ -342,50 +438,21 @@ footer {
         align-items: flex-start;
         gap: 12px;
     }
-}
 
-/* TASK ITEMS */
+    .calendar-section {
+        padding: 15px;
+    }
 
-.task-item {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 15px;
-    background: #101a2b;
-    border: 1px solid #263449;
-    border-radius: 9px;
-    transition: 0.2s;
-}
+    .calendar-grid {
+        gap: 4px;
+    }
 
-.task-item:hover {
-    border-color: #3b82f6;
-}
+    .calendar-navigation {
+        gap: 5px;
+    }
 
-.task-item input[type="checkbox"] {
-    width: 17px;
-    height: 17px;
-    accent-color: #3b82f6;
-    cursor: pointer;
-}
-
-.task-item span {
-    flex: 1;
-    font-size: 13px;
-    overflow-wrap: anywhere;
-}
-
-.task-item span.completed {
-    text-decoration: line-through;
-    color: #64748b;
-}
-
-.task-item button.delete-task {
-    background: #3b2530;
-    color: #f87171;
-    padding: 8px 12px;
-    font-size: 11px;
-}
-
-.task-item button.delete-task:hover {
-    background: #572a38;
+    .calendar-navigation h3 {
+        min-width: 85px;
+        font-size: 12px;
+    }
 }
