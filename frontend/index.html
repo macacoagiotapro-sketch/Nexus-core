@@ -23,7 +23,7 @@
 
             <a href="#" class="active">⌂ Dashboard</a>
             <a href="#">☑ Tarefas</a>
-            <a href="#">▦ Calendário</a>
+            <a href="#calendar-section">▦ Calendário</a>
             <a href="#">◎ Metas</a>
             <a href="#">◇ Hábitos</a>
             <a href="#">▤ Anotações</a>
@@ -92,6 +92,39 @@
                 <p class="empty-message">
                     Nenhuma tarefa cadastrada.
                 </p>
+            </div>
+
+        </section>
+
+        <!-- CALENDÁRIO -->
+
+        <section class="calendar-section" id="calendar-section">
+
+            <div class="section-header">
+                <div>
+                    <h2>Meu calendário</h2>
+                    <p>Visualize e organize seus compromissos.</p>
+                </div>
+
+                <div class="calendar-navigation">
+                    <button id="prev-month" type="button">❮</button>
+                    <h3 id="calendar-month">Mês atual</h3>
+                    <button id="next-month" type="button">❯</button>
+                </div>
+            </div>
+
+            <div class="calendar-grid">
+
+                <div class="calendar-day-name">Dom</div>
+                <div class="calendar-day-name">Seg</div>
+                <div class="calendar-day-name">Ter</div>
+                <div class="calendar-day-name">Qua</div>
+                <div class="calendar-day-name">Qui</div>
+                <div class="calendar-day-name">Sex</div>
+                <div class="calendar-day-name">Sáb</div>
+
+                <div id="calendar-days"></div>
+
             </div>
 
         </section>
